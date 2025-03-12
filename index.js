@@ -1,15 +1,11 @@
 function addingEventListener() {
-    const input = document.getElementById('input');
-    if (input) {
-        input.addEventListener('click', function() {
-            alert('I was clicked!');
-        });
-    } else {
-        console.error("Element with id 'input' not found.");
+    const input = document.getElementById('button');
+  
+    function clickAlert() {
+      alert('I was clicked!');
     }
-}
-
-// Ensure the DOM is fully loaded before calling the function
-document.addEventListener('DOMContentLoaded', function() {
-    addingEventListener();
-});
+  
+    input.addEventListener('click', clickAlert);
+  }
+  
+  addingEventListener();
